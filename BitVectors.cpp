@@ -1,15 +1,6 @@
-#include <iostream>
-#include <set>
-#include <map>
-#include <iterator>
+#include<iostream>
 #include<stdio.h>
-#include<string.h>
-#include<string>
-#include <ctime>
 #include <math.h>
-#include <unistd.h>
-#include <fstream>
-#include <unordered_map>
 #include <vector>
 #include <array>
 
