@@ -69,7 +69,7 @@ class Bitvector
         m_array = 0;
     }
 
-    /*ACCESSING THE BIT...............pge 89
+    /*ACCESSING THE BIT
         There are several parts to retrieving an individual bit within a bitvector:
         1. Find the cell that the bit is in.
         2. Find which bit in the cell is the required one.
@@ -87,11 +87,11 @@ class Bitvector
         int cell = p_index/32;
         int bit = p_index%32;
         return (m_array[cell] & (1 << bit)) >> bit; //binary & is applied
-        /*For line 118: 
+        /*For line 90: 
         First of all, you access the integer at index cell. This returns an integer.
         Next, you take 1 and shift it up bit spaces. Now, 
         this should give you a 1 at the same bit position as the bit you
-        want to retrieve, right? Take a look at Figure 4.3 to see how this works.
+        want to retrieve, right? 
         
         Then a binary & is applied to cell and the shifted 1 number. After this,
         the result obtained is the binary shifted number itself...
@@ -101,8 +101,8 @@ class Bitvector
         */
     }
 
-    /*SETTING THE BIT............pg 90,91,92
-    Slightly complicated
+    /*SETTING THE BIT
+    Slightly complicated,
     use '&' operator to clear bits and use the 
     'or' operator to set bits
 
@@ -118,12 +118,12 @@ class Bitvector
             m_array[cell] = (m_array[cell] | (1<<bit));
             /*
             you shift a 1 into the bit position that you want
-            to set, and you logically or that with the correct cell. ....pg92
+            to set, and you logically or that with the correct cell.
             */
         else
             m_array[cell] = (m_array[cell] & (~(1 << bit)));
             /*
-            to clear the correct bit and keep all the other bits the same, ......pg92
+            to clear the correct bit and keep all the other bits the same, 
             the bit you want to clear needs to be 0, and every other
             bit needs to be 1. Remember, using the logical and operator
             with a 1 is the identity function. Figure 4.5 demonstrates this algorithm.
